@@ -102,3 +102,7 @@ function gravarProva(){
     alert("Documento salvo com sucesso!");
     window.location.href="index.html";
 }
+
+function voltar(){
+    window.location.href="index.html";
+}
