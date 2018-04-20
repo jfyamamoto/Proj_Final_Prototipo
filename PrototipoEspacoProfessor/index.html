@@ -8,16 +8,28 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/5c73d22158.js"></script>
 </head>
 
 <body>
 
     <div class="row">
         <div id="cabecalho" class="container">
-            <div class="col-md-3">
-                <img src="logo.png" style="width:70%; margin-top:40px; margin-bottom:40px;" />
+            <div class="col-md-2">
+                <a href="">
+                    <img src="logo.png" style="width:100%; margin-top:30px; margin-bottom:40px;" />
+                </a>
+            </div>
+            <div class="col-md-1">
+                <img src="avatar.png" style="width:100%;margin-top:30px;"/>
+            </div>
+            <div class="col-md-4">
+                <p style="color:gray;margin-top:30px;margin-bottom:0px;">09542354</p>
+                <p style="margin-top:0px;">Professor José da Silva</p>
             </div>
             <div class="col-md-4 pull-right">
                 <div class="pull-right" style="margin-top:20px;">
@@ -32,7 +44,7 @@
         <div class="container">
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
+
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
                             aria-expanded="false">
@@ -43,7 +55,6 @@
                         </button>
                     </div>
 
-                    <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
 
@@ -51,7 +62,7 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Informações
                                     <span class="caret"></span>
                                 </a>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu menu-formatado">
                                     <li>
                                         <a href="#">item 1</a>
                                     </li>
@@ -74,37 +85,15 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="javascript:void(0)" id="questoes-link">Questões</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Provas</a>
+                                        <a href="javascript:void(0)" id="questoes-link">Provas</a>
                                     </li>
                                     <li>
                                         <a href="#">Exercícios</a>
                                     </li>
-
-                                </ul>
-                            </li>
-
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">AutoAtendimento
-                                    <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
                                     <li>
-                                        <a href="#">item 1</a>
+                                        <a href="#">Questões</a>
                                     </li>
-                                </ul>
-                            </li>
 
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Secretaria
-                                    <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="#">item 1</a>
-                                    </li>
                                 </ul>
                             </li>
 
@@ -120,7 +109,29 @@
                             </li>
 
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Outros
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Turmas
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">item 1</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Orientação
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">item 1</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Processos
                                     <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
@@ -131,32 +142,30 @@
 
                             </ul>
                     </div>
-                    <!-- /.navbar-collapse -->
                 </div>
-                <!-- /.container-fluid -->
             </nav>
         </div>
     </div>
 
     <div class="row">
         <div class="container">
-            <p style="color:red; margin-left:72px; margin-top: -5px;">Meu Espaço</p>
+            <p style="color:red; margin-left:20px; margin-top: -5px;">Meu Espaço</p>
         </div>
     </div>
 
     <div class="row">
         <div id="quadros" class="container">
             <div class="col-md-8 col-sm-12">
-                <div style="border: 1px solid #d3d3d3; padding:20px;">
+                <div id="main-tab-content" style="border: 1px solid #d3d3d3; padding:20px;min-height:550px;">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" id="mensagens-tab" data-toggle="tab" href="#mensagem" role="tab" aria-controls="mensagem" aria-selected="true">Mensagens</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="plano-tab" data-toggle="tab" href="#plano" role="tab" aria-controls="profile" aria-selected="false">Plano de Ensino</a>
+                            <a class="nav-link" id="plano-tab" data-toggle="tab" href="#plano" role="tab" aria-controls="profile" aria-selected="false">Grade Horária</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="frequencia-tab" data-toggle="tab" href="#frequencia" role="tab" aria-controls="contact" aria-selected="false">Frequência</a>
+                            <a class="nav-link" id="frequencia-tab" data-toggle="tab" href="#frequencia" role="tab" aria-controls="contact" aria-selected="false">Turmas</a>
                         </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
@@ -164,6 +173,7 @@
                             <table class="table table-bordered">
                                 <thead></thead>
                                 <tbody></tbody>
+                                <tfoot></tfoot>
                             </table>
                         </div>
                         <div class="tab-pane fade" id="plano" role="tabpanel" aria-labelledby="profile-tab">
@@ -174,10 +184,23 @@
                         </div>
                     </div>
                 </div>
+                    <p style="position:absolute;font-size:80px;margin-left:265px;margin-top:-7px;color:gray;">.</p>
+                    <h4 style="color:red; margin-top:20px;">Timeline</h4>
+                    <p style="text-align:center;margin-bottom:0px;">2018&nbsp;&nbsp;2017&nbsp;&nbsp;2016&nbsp;&nbsp;2015&nbsp;&nbsp;2014&nbsp;&nbsp;2013</p>
+                    <hr style="margin:4px;">
+                    <p style="color:gray;text-align:center;">Jan&nbsp;&nbsp;&nbsp;
+                                                               Fev&nbsp;&nbsp;&nbsp;
+                                                               Mar&nbsp;&nbsp;&nbsp;
+                                                               Abr&nbsp;&nbsp;&nbsp;
+                                                               Mai&nbsp;&nbsp;&nbsp;
+                                                               Jun&nbsp;&nbsp;&nbsp;
+                                                               Jul&nbsp;&nbsp;&nbsp;
+                                                               Ago&nbsp;&nbsp;&nbsp;
+                                                               Set&nbsp;&nbsp;&nbsp;
+                                                               Out&nbsp;&nbsp;&nbsp;
+                                                               Nov&nbsp;&nbsp;&nbsp;
+                                                               Dez&nbsp;&nbsp;&nbsp;</p>
 
-                <div class="container">
-                    <p style="color:red; margin-top:20px;">Timeline</p>
-                </div>
             </div>
             <div class="col-md-4 col-sm-12">
                 <div style="border: 1px solid #d3d3d3; height:100px; padding:0px 20px 0px 20px; height:335px;">
@@ -200,19 +223,20 @@
             </div>
 
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
-                <div style="border: 1px solid #d3d3d3; height:100px; padding:0px 20px 0px 20px; height:335px;">
-                    <h4 style="color:red;">Meus Arquivos</h4>
+                <div style="border: 1px solid #d3d3d3; height:100px; padding:0px 20px 0px 20px; height:335px;background-color:#ffffaa;">
+                    <h4 style="color:red;">Bloco de Notas</h4>
                     <hr style="border:0.7px solid #d3d3d3;">
+                    <p style="margin-bottom:0px;color:gray;">Utilize este espaço para anotações</p>
+                    <textarea style="border: 1px solid #d9d9d9;" cols="45" rows="9"></textarea>
                 </div>
             </div>
-
         </div>
     </div>
 
     <script src="script.js"></script>
-
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
 </body>
 
 </html>

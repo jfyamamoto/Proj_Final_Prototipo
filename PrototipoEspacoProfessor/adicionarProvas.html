@@ -1,0 +1,44 @@
+<form style="padding-top:10px;padding-right:20px;padding-left:15px;border:1px solid gray;margin:20px;padding-bottom:20px;">
+    <div class="row">
+        <div class="form-group">
+            <div class="col-md-6 col-sm-12">
+                <label for="materia">Matéria</label>
+                <input type="text" class="form-control" id="materia" aria-describedby="materiaHelp" placeholder="Insira o nome da matéria">
+                <small id="materiaHelp" class="form-text text-muted">O nome da matéria é obrigatório.</small>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" aria-describedby="nomeHelp" placeholder="Insira o nome do documento">
+                <small id="nomeHelp" class="form-text text-muted">Nome do documento que será gerado.</small>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <label for="tema">Tema</label>
+                <input type="text" class="form-control" id="tema" aria-describedby="nomeHelp" placeholder="Insira o tema">
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <label for="materia">Tipo</label>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="true">
+                        Selecione
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li>
+                            <a href="#">Prova</a>
+                        </li>
+                        <li>
+                            <a href="#">Exercício</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<div>
+    <div class="row" style="margin-top:30px;margin-left:14px;">
+        <a class="btn btn-primary" href="index.html">Voltar</a>
+        <button class="btn btn-primary" onclick="gravarProva();">Gravar</button>
+    </div>
+</div>
