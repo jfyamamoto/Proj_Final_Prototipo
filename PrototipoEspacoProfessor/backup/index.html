@@ -6,17 +6,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="lib/css/style.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css"> -->
-    <link rel="stylesheet" type="text/css" href="lib/DataTables/datatables.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-    <script src="lib/js/bootstrap.min.js"></script>
-    <!-- <script src="https://use.fontawesome.com/5c73d22158.js"></script> -->
-    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/5c73d22158.js"></script>
 </head>
 
 <body style="min-height:1050px;">
@@ -24,11 +20,11 @@
         <div id="cabecalho" class="container">
             <div class="col-md-2">
                 <a href="">
-                    <img src="lib/img/logo.png" class="logo-img"/>
+                    <img src="logo.png" style="width:100%; margin-top:30px; margin-bottom:40px;" />
                 </a>
             </div>
             <div class="col-md-1">
-                <img src="lib/img/avatar.png" class="avatar-format"/>
+                <img src="avatar.png" style="width:100%;margin-top:30px;"/>
             </div>
             <div class="col-md-4">
                 <p style="color:gray;margin-top:30px;margin-bottom:0px;">09542354</p>
@@ -36,7 +32,7 @@
             </div>
             <div class="col-md-4 pull-right">
                 <div class="pull-right" style="margin-top:20px;">
-                    <i class="fa fa-question-circle" aria-hidden="true" style="font-size:22px;color:gray;"></i> Meus Dados | Sair
+                    Meus Dados | Sair
                 </div>
                 <input class="form-control" style="margin-top:70px;" />
             </div>
@@ -67,25 +63,17 @@
                                 </a>
                                 <ul class="dropdown-menu menu-formatado">
                                     <li>
-                                        <a href="#">Referências</a>
+                                        <a href="#">item 1</a>
                                     </li>
                                     <li>
-                                        <a href="#">Biblioteca</a>
+                                        <a href="#">item 2</a>
                                     </li>
                                     <li>
-                                        <a href="#">Universia</a>
-                                    </li>
-                                    <li role="separator" class="divider"></li>
-                                    <li>
-                                        <a href="#">Publicações Acadêmicas</a>
+                                        <a href="#">item 3</a>
                                     </li>
                                     <li role="separator" class="divider"></li>
                                     <li>
-                                        <a href="#">Publicações Internacionais</a>
-                                    </li>
-                                    <li role="separator" class="divider"></li>
-                                    <li>
-                                        <a href="#">Calendários</a>
+                                        <a href="#">item 4</a>
                                     </li>
                                 </ul>
                             </li>
@@ -96,14 +84,15 @@
                                 </a>
                                 <ul class="dropdown-menu  menu-formatado">
                                     <li>
-                                        <a href="javascript:void(0)" id="questoes-link">Documentos</a>
+                                        <a href="javascript:void(0)" id="questoes-link">Provas</a>
                                     </li>
                                     <li>
-                                        <a href="javascript:void(0)" id="gerenciamento-link">Gerenciamento</a>
+                                        <a href="#">Exercícios</a>
                                     </li>
                                     <li>
                                         <a href="#">Questões</a>
                                     </li>
+
                                 </ul>
                             </li>
 
@@ -113,13 +102,7 @@
                                 </a>
                                 <ul class="dropdown-menu  menu-formatado">
                                     <li>
-                                        <a href="#">Arquivos</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Mensagens</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Mural</a>
+                                        <a href="#">item 1</a>
                                     </li>
                                 </ul>
                             </li>
@@ -130,16 +113,7 @@
                                 </a>
                                 <ul class="dropdown-menu  menu-formatado">
                                     <li>
-                                        <a href="#">Pauta</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Menções</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Participações</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Arquivos</a>
+                                        <a href="#">item 1</a>
                                     </li>
                                 </ul>
                             </li>
@@ -150,7 +124,7 @@
                                 </a>
                                 <ul class="dropdown-menu  menu-formatado">
                                     <li>
-                                        <a href="#">Grupos de orientação</a>
+                                        <a href="#">item 1</a>
                                     </li>
                                 </ul>
                             </li>
@@ -161,16 +135,7 @@
                                 </a>
                                 <ul class="dropdown-menu  menu-formatado">
                                     <li>
-                                        <a href="#">Aguardando análise</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Aguardando recebimeto</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Pesquisar Processos</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Meus Processos</a>
+                                        <a href="#">item 1</a>
                                     </li>
                             </li>
 
@@ -193,13 +158,13 @@
                 <div id="main-tab-content" style="border: 1px solid #d3d3d3; padding:20px;min-height:550px;">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="mensagens-tab" data-toggle="tab" href="#mensagem" role="tab" aria-controls="mensagem" aria-selected="true" style="color:red;">Mensagens</a>
+                            <a class="nav-link active" id="mensagens-tab" data-toggle="tab" href="#mensagem" role="tab" aria-controls="mensagem" aria-selected="true">Mensagens</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="plano-tab" data-toggle="tab" href="#plano" role="tab" aria-controls="profile" aria-selected="false" style="color:red;">Grade Horária</a>
+                            <a class="nav-link" id="plano-tab" data-toggle="tab" href="#plano" role="tab" aria-controls="profile" aria-selected="false">Grade Horária</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="frequencia-tab" data-toggle="tab" href="#frequencia" role="tab" aria-controls="contact" aria-selected="false" style="color:red;">Turmas</a>
+                            <a class="nav-link" id="frequencia-tab" data-toggle="tab" href="#frequencia" role="tab" aria-controls="contact" aria-selected="false">Turmas</a>
                         </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
@@ -252,7 +217,7 @@
                         </strong>
                         <hr style="border-top: 1px solid red; margin-bottom:0;">
                     </div>
-                    <img src="lib/img/calendario.gif" style="width:100%;position:relative;" />
+                    <img src="calendario.gif" style="width:100%;position:relative;" />
                 </div>
             </div>
 
@@ -267,12 +232,10 @@
         </div>
     </div>
 
-    <script src="lib/js/script.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script> -->
-        <script type="text/javascript" src="lib/js/jquery.js"></script>
-        <!-- <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script> -->
-        <script type="text/javascript" src="lib/DataTables/datatables.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
 </body>
 
 </html>
