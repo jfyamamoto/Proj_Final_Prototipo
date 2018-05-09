@@ -1,3 +1,9 @@
+
+    <div class="row">
+            <div class="col-md-5">
+                <h3 style="margin-left: 18px;">Nova Prova</h3>
+            </div>
+        </div>
 <form id="formulario-adicionar-provas">
     <div class="row">
         <div class="form-group">
@@ -11,7 +17,7 @@
                 <input type="text" class="form-control" id="nome" aria-describedby="nomeHelp" placeholder="Insira o nome do documento">
                 <small id="nomeHelp" class="form-text text-muted">Nome do documento que será gerado.</small>
             </div>
-            <div class="col-md-6 col-sm-12">
+            <!-- <div class="col-md-6 col-sm-12">
                 <label for="tema">Tema</label>
                 <br>
                 <select class="form-control">
@@ -19,7 +25,7 @@
                     <option value="1">Elicitação de requisitos</option>
                     <option value="2">Modelos de Projetos</option>
                 </select>
-            </div>
+            </div> -->
             <div class="col-md-3 col-sm-12">
                 <label for="materia">Tipo</label>
                 <br>
@@ -34,12 +40,13 @@
                 <a href="javascript:void(0)" onclick="adicionarQuestao();">
                     <i style="font-size:30px;" class="fa fa-plus-circle" aria-hidden="true"></i>
                 </a>
-                <table id="tabela-questoes" class="table table-striped table-bordered">
+                <table id="tabela-questoes" class="table table-striped table-bordered table-responsive">
                     <thead>
                         <tr>
                             <th>Categoria</th>
-                            <th>Subtema</th>
-                            <th>Núm. Questão</th>
+                            <th>Tema</th>
+                            <th>Qtd Categorias</th>
+                            <th>Qtd Questões</th>
                             <th>Excluir</th>
                         </tr>
                     </thead>

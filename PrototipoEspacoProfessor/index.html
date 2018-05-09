@@ -10,13 +10,16 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="lib/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css"> -->
-    <link rel="stylesheet" type="text/css" href="lib/DataTables/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/DataTables/datatables.min.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
     <script src="lib/js/bootstrap.min.js"></script>
     <!-- <script src="https://use.fontawesome.com/5c73d22158.js"></script> -->
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    
 </head>
 
 <body style="min-height:1050px;">
@@ -24,11 +27,11 @@
         <div id="cabecalho" class="container">
             <div class="col-md-2">
                 <a href="">
-                    <img src="lib/img/logo.png" class="logo-img"/>
+                    <img src="lib/img/logo.png" class="logo-img" />
                 </a>
             </div>
             <div class="col-md-1">
-                <img src="lib/img/avatar.png" class="avatar-format"/>
+                <img src="lib/img/avatar.png" class="avatar-format" />
             </div>
             <div class="col-md-4">
                 <p style="color:gray;margin-top:30px;margin-bottom:0px;">09542354</p>
@@ -96,13 +99,16 @@
                                 </a>
                                 <ul class="dropdown-menu  menu-formatado">
                                     <li>
-                                        <a href="javascript:void(0)" id="questoes-link">Documentos</a>
+                                        <a href="javascript:void(0)" id="documentos-link">Documentos</a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)" id="gerenciamento-link">Gerenciamento</a>
                                     </li>
                                     <li>
-                                        <a href="#">Questões</a>
+                                        <a href="javascript:void(0)" id="questoes-link">Questões</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Análise</a>
                                     </li>
                                 </ul>
                             </li>
@@ -193,13 +199,16 @@
                 <div id="main-tab-content" style="border: 1px solid #d3d3d3; padding:20px;min-height:550px;">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="mensagens-tab" data-toggle="tab" href="#mensagem" role="tab" aria-controls="mensagem" aria-selected="true" style="color:red;">Mensagens</a>
+                            <a class="nav-link active" id="mensagens-tab" data-toggle="tab" href="#mensagem" role="tab" aria-controls="mensagem" aria-selected="true"
+                                style="color:red;">Mensagens</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="plano-tab" data-toggle="tab" href="#plano" role="tab" aria-controls="profile" aria-selected="false" style="color:red;">Grade Horária</a>
+                            <a class="nav-link" id="plano-tab" data-toggle="tab" href="#plano" role="tab" aria-controls="profile" aria-selected="false"
+                                style="color:red;">Grade Horária</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="frequencia-tab" data-toggle="tab" href="#frequencia" role="tab" aria-controls="contact" aria-selected="false" style="color:red;">Turmas</a>
+                            <a class="nav-link" id="frequencia-tab" data-toggle="tab" href="#frequencia" role="tab" aria-controls="contact" aria-selected="false"
+                                style="color:red;">Turmas</a>
                         </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
@@ -218,22 +227,14 @@
                         </div>
                     </div>
                 </div>
-                    <p style="position:absolute;font-size:80px;margin-left:265px;margin-top:-7px;color:gray;">.</p>
-                    <h4 style="color:red; margin-top:20px;">Timeline</h4>
-                    <p style="text-align:center;margin-bottom:0px;">2018&nbsp;&nbsp;2017&nbsp;&nbsp;2016&nbsp;&nbsp;2015&nbsp;&nbsp;2014&nbsp;&nbsp;2013</p>
-                    <hr style="margin:4px;">
-                    <p style="color:gray;text-align:center;">Jan&nbsp;&nbsp;&nbsp;
-                                                               Fev&nbsp;&nbsp;&nbsp;
-                                                               Mar&nbsp;&nbsp;&nbsp;
-                                                               Abr&nbsp;&nbsp;&nbsp;
-                                                               Mai&nbsp;&nbsp;&nbsp;
-                                                               Jun&nbsp;&nbsp;&nbsp;
-                                                               Jul&nbsp;&nbsp;&nbsp;
-                                                               Ago&nbsp;&nbsp;&nbsp;
-                                                               Set&nbsp;&nbsp;&nbsp;
-                                                               Out&nbsp;&nbsp;&nbsp;
-                                                               Nov&nbsp;&nbsp;&nbsp;
-                                                               Dez&nbsp;&nbsp;&nbsp;</p>
+                <p style="position:absolute;font-size:80px;margin-left:265px;margin-top:-7px;color:gray;">.</p>
+                <h4 style="color:red; margin-top:20px;">Timeline</h4>
+                <p style="text-align:center;margin-bottom:0px;">2018&nbsp;&nbsp;2017&nbsp;&nbsp;2016&nbsp;&nbsp;2015&nbsp;&nbsp;2014&nbsp;&nbsp;2013</p>
+                <hr style="margin:4px;">
+                <p style="color:gray;text-align:center;">Jan&nbsp;&nbsp;&nbsp; Fev&nbsp;&nbsp;&nbsp; Mar&nbsp;&nbsp;&nbsp; Abr&nbsp;&nbsp;&nbsp; Mai&nbsp;&nbsp;&nbsp;
+                    Jun&nbsp;&nbsp;&nbsp; Jul&nbsp;&nbsp;&nbsp; Ago&nbsp;&nbsp;&nbsp; Set&nbsp;&nbsp;&nbsp; Out&nbsp;&nbsp;&nbsp;
+                    Nov&nbsp;&nbsp;&nbsp; Dez&nbsp;&nbsp;&nbsp;
+                </p>
 
             </div>
             <div class="col-md-4 col-sm-12">
@@ -270,9 +271,10 @@
     <script src="lib/js/script.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script> -->
-        <script type="text/javascript" src="lib/js/jquery.js"></script>
-        <!-- <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script> -->
-        <script type="text/javascript" src="lib/DataTables/datatables.min.js"></script>
+    <script type="text/javascript" src="lib/js/jquery.js"></script>
+    <!-- <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script> -->
+    <script type="text/javascript" src="lib/DataTables/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 </body>
 
 </html>

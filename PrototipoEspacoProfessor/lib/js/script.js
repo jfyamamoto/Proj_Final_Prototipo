@@ -1,3 +1,7 @@
+$(document).ready(function() {
+    $('.select-two-tema').select2();
+});
+
 $('thead').html(
     `<tr style="background-color:#f5f5f5;">
             <th style="width:8%;"></th>
@@ -7,7 +11,7 @@ $('thead').html(
 );
 
 $('tfoot').html(
-    `<<tr style="background-color:#f5f5f5;">
+    `<<tr style="background-color:#f5f5f5;">    
     <th colspan="5" style="height:35px;"></th>
     </tr>`
 );
@@ -62,6 +66,13 @@ function obterDivGerenciamento(){
     }});
 }
 
+function obterQuestoes(){
+    $.ajax({url: "pages/questoes.html", dataType:"html", success: function(result){
+        $("#main-tab-content").html(result);
+    }});
+    formulario-adicionar-questoes
+}
+
 function obterDadosProvas(){
     $.ajax({url: "data/provas.json", dataType: "json", success: function(result){
         montarTabela(result);
@@ -91,7 +102,7 @@ function montarTabela(dados){
 });
 }
 
-$("#questoes-link").click(function(){
+$("#documentos-link").click(function(){
     obterDivTabela();
     obterDadosProvas();
 });
@@ -99,6 +110,10 @@ $("#questoes-link").click(function(){
 $("#gerenciamento-link").click(function(){
     obterDivGerenciamento();
 });
+
+$("#questoes-link").click(function(){
+    obterQuestoes();
+})
 
 function adicionarProvas(){
     $.ajax({url: "pages/adicionarProvas.html", dataType: "html", success: function(result){
@@ -120,35 +135,44 @@ function voltar(){
 function adicionarQuestao(){
     numero; 
     questaoVetor[numero] =  `<tr>
-                <td>
-                    <select>
-                        <option>Categoria</option>
-                        <option>1</<option>
-                        <option>2</<option>
-                        <option>3</<option>
-                        <option>4</<option>
-                        <option>5</<option>
-                    </select>
-                </td>
-                <td>
-                    <select>
-                        <option>Subtema</option>
-                        <option>XP</<option>
-                        <option>RUP</<option>
-                        <option>Elicitação de requisitos</<option>
-                        <option>Cascata</<option>
-                    </select>
-                </td>
-                <td class="numero-linha">
-                    ` + (numero + 1) + `
-                </td>
-                <td>
-                    <a href='javascript:void(0)' onclick='excluirQuestao(this);' numero-exclusao='` + numero + `'>
-                        <i class='fa fa-trash' aria-hidden='true'>
-                        </i>
-                    </a>
-                </td>
-            </tr>`
+    <td>
+        <select>
+            <option>Categoria</option>
+            <option>1</<option>
+            <option>2</<option>
+            <option>3</<option>
+            <option>4</<option>
+            <option>5</<option>
+        </select>
+    </td>
+    <td>
+        <select>
+            <option value="1">Tema</option>
+            <option value="1">XP</<option>
+            <option value="1">RUP</<option>
+            <option value="1">Elicitação de requisitos</<option>
+            <option value="1">Cascata</<option>
+        </select>
+        <a href="javascript:void" onclick="">Add</a>
+    </td>
+    <td class="numero-linha">
+        ` + (numero + 1) + `
+    </td>
+    <td>
+        <input type="number">
+    </td>
+    <td>
+        <a href='javascript:void(0)' onclick='excluirQuestao(this);' numero-exclusao='` + numero + `'>
+            <i class='fa fa-trash' aria-hidden='true'>
+            </i>
+        </a>
+    </td>
+</tr>
+<tr>
+<td colspan="4" id="temas-adicionados">
+    Temas Adicionados:
+</td>
+</tr>`
     $('#corpo-tabela-questoes').append(questaoVetor[numero++]);
 }
 

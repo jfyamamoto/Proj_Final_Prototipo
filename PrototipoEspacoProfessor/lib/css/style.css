@@ -68,3 +68,12 @@
     select .btn{
         border: 1px solid gray !important;
     }
+
+    .margin-title-questoes{
+        margin-left: 18px;
+    }
+
+    .button-questoes{
+        margin-top: 25px;
+        padding-bottom: 25px;
+    }

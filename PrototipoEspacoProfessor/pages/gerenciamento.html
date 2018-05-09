@@ -1,22 +1,61 @@
+<div class="row">
 <form id="formulario-gerenciamento">
-    <div class="row">
-        <div class="form-group">
-            <div class="col-md-3 col-sm-12">
-                <label for="materia">Dado</label>
-                <br>
-                <select class="form-control">
-                    <option selected="selected">Selecione</option>
-                    <option value="1">Tema</option>
-                    <option value="2">Categoria</option>
-                    <option value="2">Subtema</option>
-                </select>
-            </div>
+    <div class="form-group">
+        <div class="col-md-3 col-sm-12">
+            <label for="materia">Classificação</label>
+            <br>
+            <select class="form-control">
+                <option selected="selected">Selecione</option>
+                <option value="1">Disciplina</option>
+                <option value="2">Tema</option>
+                <option value="2">Subtema</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label>Nome</label>
+            <input placeholder="Nome" class="form-control">
         </div>
     </div>
-</form>
-<div>
     <div class="row botao-form-prova" style="margin-left:20px;">
-        <a class="btn btn-primary" onclick="voltar();">Voltar</a>
-        <button class="btn btn-primary" onclick="gravarProva();">Salvar</button>
+            <a class="btn btn-primary" onclick="voltar();" style="margin-top:25px;">Voltar</a>
+            <button class="btn btn-primary" onclick="{ alert('Salvo com sucesso!'); window.location.href='index.html';}" style="margin-top:25px;">Salvar</button>
+        </div>
+</form>
+</div>
+
+<div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-10">
+            <h2>Disciplinas</h2>
+            <table class="table table-bordered table-condensed table-striped">
+                <thead>
+                    <tr>
+                        <td style="font-weight:900">Nome</td>
+                        <td><i class='fa fa-trash' aria-hidden='true'></i></td>
+                        <td><i class='fa fa-pencil' aria-hidden='true'></i></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Engenharia de software</td>
+                        <td>Editar</td>
+                        <td>Excluir</td>
+                    </tr>
+                    <tr>
+                        <td>Análise de requisitos</td>
+                        <td>Editar</td>
+                        <td>Excluir</td>
+                    </tr>
+                    <tr>
+                        <td>Lógica de Programação</td>
+                        <td>Editar</td>
+                        <td>Excluir</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
