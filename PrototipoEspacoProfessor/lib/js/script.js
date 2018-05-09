@@ -146,14 +146,14 @@ function adicionarQuestao(){
         </select>
     </td>
     <td>
-        <select>
-            <option value="1">Tema</option>
-            <option value="1">XP</<option>
-            <option value="1">RUP</<option>
-            <option value="1">Elicitação de requisitos</<option>
-            <option value="1">Cascata</<option>
+        <select id="select-temas">
+            <option value="">Tema</option>
+            <option value="XP">XP</<option>
+            <option value="RUP">RUP</<option>
+            <option value="Elicitacao de Requisitos">Elicitação de requisitos</<option>
+            <option value="Cascata">Cascata</<option>
         </select>
-        <a href="javascript:void" onclick="">Add</a>
+        <a href="javascript:void" data-temas-added="` + numero + `" onclick="adicionarTemaCategoria(this)">Add</a>
     </td>
     <td class="numero-linha">
         ` + (numero + 1) + `
@@ -169,8 +169,10 @@ function adicionarQuestao(){
     </td>
 </tr>
 <tr>
-<td colspan="4" id="temas-adicionados">
-    Temas Adicionados:
+<td colspan="5" class="alert-danger" style="padding: 15px;">
+    <a href='javascript:void(0)' onclick='limparTemas(this)'><i class='fa fa-times pull-right' aria-hidden='true'></i></a>
+    <h4 style='margin-top: 10px;'>Temas Adicionados:</h4>
+    <ul></ul>
 </td>
 </tr>`
     $('#corpo-tabela-questoes').append(questaoVetor[numero++]);
@@ -188,4 +190,62 @@ function addQuestoes(){
     for(x = 0; x < questaoVetor.length; x++){
         adicionarQuestao();
     }
+}
+
+function adicionarTemaCategoria(conteudo){
+    var trTemas = $(conteudo).parents('tr').next();
+
+    var comboTemas = $(conteudo).siblings();
+    var conteudoTema = $(comboTemas, 'option:selected').val();
+    $(trTemas).children().find('ul').append('<li>' + conteudoTema + '</li>');
+
+    $(trTemas).children().removeClass('alert-danger');
+    $(trTemas).children().addClass('alert-success');
+}
+
+function limparTemas(conteudo){
+    //var teste = $(conteudo).parents('tr').next().html('');
+    var teste = $(conteudo).parents('tr').children().find('li').remove();
+    console.log(teste);
+    $(conteudo).parent().removeClass('alert-success');
+    $(conteudo).parent().addClass('alert-danger');
+}
+
+function obterDivAnalise(){
+    $.ajax({url: "pages/Analise.html", dataType:"html", success: function(result){
+        $("#main-tab-content").html(result);
+        gerarGraficoQuestoesErradas();
+    }});
+}
+
+$("#analise-link").click(function(){
+    obterDivAnalise();
+});
+
+function gerarGraficoQuestoesErradas(){
+    $(function () { 
+    var myChart = Highcharts.chart('grafico-questoes-erradas', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Desempenho dos alunos'
+        },
+        xAxis: {
+            categories: ['Questão [1]', 'Questão [2]', 'Questão [3]']
+        },
+        yAxis: {
+            title: {
+                text: 'Alunos'
+            }
+        },
+        series: [{
+            name: 'Certas',
+            data: [1, 0, 4]
+        }, {
+            name: 'Erradas',
+            data: [5, 7, 3]
+        }]
+    });
+});
 }
