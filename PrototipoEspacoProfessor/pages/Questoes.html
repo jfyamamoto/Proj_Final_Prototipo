@@ -1,52 +1,83 @@
 <form id="formulario-adicionar-questoes">
     <div class="row">
         <div class="form-group">
-            <h2 class="margin-title-questoes">Enunsiado</h2>
-            <hr>
-            <div class="col-md-6 col-sm-12">
-                <label for="materia">Tema</label>
-                <input type="text" class="form-control" id="tema" aria-describedby="temaHelp" placeholder="Insira o nome do tema">
+            <h2 class="margin-title-questoes">Enunciado</h2>
+            <hr/>
+            <div class="col-md-3 col-sm-12">
+                <label for="tema">Disciplina</label>
+                <select class="form-control">
+                    <option selected="selected">Selecione</option>
+                    <option>Engenharia de Software</option>
+                    <option>Análise de requisitos</option>
+                    <option>Lógica de Programação</option>
+                </select>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <label for="tema">Tema</label>
+                <select class="form-control">
+                    <option selected="selected">Selecione</option>
+                    <option>Metodologias Ágeis</option>
+                    <option>Projeto</option>
+                    <option>Ciclo de Vida do Software</option>
+                    <option>Desenvolvimento do software</option>
+                </select>
+            </div>
+            <div class="col-md-12 col-sm-12">
+                <label for="materia">Descrição</label>
+                <textarea id="descricao-enunciado" class="form-control"></textarea>
             </div>
             <div class="col-md-12 col-sm-12 pull-right">
-                <button class="btn btn-primary form-control button-questoes">Salvar</button>
+                <button class="btn btn-primary form-control button-questoes" onclick="gerarMensagemEnunciado(); return false;">Salvar</button>
+                <div id="mensagem-salva-enunciado" style="margin-top: 50px;">
+                    <p style="padding: 10px; text-align: center;"></p>
+                </div>
             </div>
-        </div>
-            <br><br><br><br><br><br><br>
+
         </div>
     </div>
     <div class="row">
         <div class="form-group">
             <h2 class="margin-title-questoes">Afirmativa</h2>
-            <hr>
+            <hr/>
             <div class="col-md-6 col-sm-12">
                 <label for="materia">Subtema</label>
-                <input type="text" class="form-control" id="tema" aria-describedby="temaHelp" placeholder="Insira o nome do Subtema">
-            </div><div class="col-md-5 col-sm-12">
-                <label for="materia">Tema</label>
-                <br>
+                <br/>
                 <select class="form-control">
                     <option selected="selected">Selecione</option>
                     <option value="1">XP</option>
                     <option value="2">RUP</option>
-                    <i class="fas fa-location-arrow"></i>
+                    <option value="2">Scrum</option>
+                    <option value="2">Cascata</option>
+                    <option>
+                        <i class="fas fa-location-arrow"></i>
                     </option>
                 </select>
             </div>
             <div class="col-md-3 col-sm-12">
                 <label for="materia">Valor</label>
-                <br>
+                <br/>
                 <select class="form-control">
                     <option selected="selected">Selecione</option>
                     <option value="1">Verdadeiro</option>
                     <option value="2">Falso</option>
-                    <i class="fas fa-location-arrow"></i>
+                    <option>
+                        <i class="fas fa-location-arrow"></i>
                     </option>
                 </select>
             </div>
+            <div class="col-md-12">
+                <label for="materia">Descrição</label>
+                <textarea id="descricao-afirmativa" class="form-control"></textarea>
+            </div>
             <div class="col-md-12 col-sm-12">
-                <button class="btn btn-primary form-control button-questoes">Salvar</button>
+                <button class="btn btn-primary form-control button-questoes" onclick="gerarMensagemAfirmativa(); return false;">Salvar</button>
+
+                <div id="mensagem-salva-afirmativa"  style="margin-top: 50px;">
+                    <p style="padding: 10px; text-align: center;"></p>
+                </div>
             </div>
         </div>
     </div>
-    </div>
 </form>
+
+<!-- mais de um subtema na afirmativa e código para identificação dos enunciados e afirmativas -->

@@ -2,7 +2,7 @@
     {
         "nome": "Prova_1.txt",
         "materia": "Engenharia de Software",
-        "tema": "RUP",
+        "tipo": "Prova",
         "editar": "<i class='fa fa-pencil' aria-hidden='true'></i>",
         "excluir": "<i class='fa fa-trash' aria-hidden='true'></i>",
         "imprimir": "<i class='fa fa-print' aria-hidden='true'></i>"
@@ -10,7 +10,7 @@
     {
         "nome": "Exercicio_1.txt",
         "materia": "Engenharia de Software",
-        "tema": "Cascata",
+        "tipo": "Exercicio",
         "editar": "<i class='fa fa-pencil' aria-hidden='true'></i>",
         "excluir": "<i class='fa fa-trash' aria-hidden='true'></i>",
         "imprimir": "<i class='fa fa-print' aria-hidden='true'></i>"
@@ -18,7 +18,7 @@
     {
         "nome": "Prova_2.txt",
         "materia": "Engenharia de Software",
-        "tema": "XP",
+        "tipo": "Prova",
         "editar": "<i class='fa fa-pencil' aria-hidden='true'></i>",
         "excluir": "<i class='fa fa-trash' aria-hidden='true'></i>",
         "imprimir": "<i class='fa fa-print' aria-hidden='true'></i>"
@@ -26,7 +26,7 @@
     {
         "nome": "Prova_3.txt",
         "materia": "Engenharia de Software",
-        "tema": "Espiral",
+        "tipo": "Prova",
         "editar": "<i class='fa fa-pencil' aria-hidden='true'></i>",
         "excluir": "<i class='fa fa-trash' aria-hidden='true'></i>",
         "imprimir": "<i class='fa fa-print' aria-hidden='true'></i>"
@@ -34,7 +34,7 @@
     {
         "nome": "Exercicio_2.txt",
         "materia": "Engenharia de Software",
-        "tema": "Elicitação de dados",
+        "tipo": "Exercicio",
         "editar": "<i class='fa fa-pencil' aria-hidden='true'></i>",
         "excluir": "<i class='fa fa-trash' aria-hidden='true'></i>",
         "imprimir": "<i class='fa fa-print' aria-hidden='true'></i>"
@@ -42,7 +42,7 @@
     {
         "nome": "Exercicio_3.txt",
         "materia": "Engenharia de Software",
-        "tema": "Requisitos",
+        "tipo": "Exercicio",
         "editar": "<i class='fa fa-pencil' aria-hidden='true'></i>",
         "excluir": "<i class='fa fa-trash' aria-hidden='true'></i>",
         "imprimir": "<i class='fa fa-print' aria-hidden='true'></i>"
@@ -50,7 +50,7 @@
     {
         "nome": "Prova_4.txt",
         "materia": "Engenharia de Software",
-        "tema": "Fases do projeto",
+        "tipo": "Prova",
         "editar": "<i class='fa fa-pencil' aria-hidden='true'></i>",
         "excluir": "<i class='fa fa-trash' aria-hidden='true'></i>",
         "imprimir": "<i class='fa fa-print' aria-hidden='true'></i>"
@@ -58,7 +58,7 @@
     {
         "nome": "Prova_5.txt",
         "materia": "Engenharia de Software",
-        "tema": "Projeto",
+        "tipo": "Prova",
         "editar": "<i class='fa fa-pencil' aria-hidden='true'></i>",
         "excluir": "<i class='fa fa-trash' aria-hidden='true'></i>",
         "imprimir": "<i class='fa fa-print' aria-hidden='true'></i>"
@@ -66,7 +66,7 @@
     {
         "nome": "Prova_6.txt",
         "materia": "Engenharia de Software",
-        "tema": "RUP e Cascata",
+        "tipo": "Prova",
         "editar": "<i class='fa fa-pencil' aria-hidden='true'></i>",
         "excluir": "<i class='fa fa-trash' aria-hidden='true'></i>",
         "imprimir": "<i class='fa fa-print' aria-hidden='true'></i>"
@@ -74,7 +74,7 @@
     {
         "nome": "Exercicio_4.txt",
         "materia": "Engenharia de Software",
-        "tema": "Metodologias ágeis",
+        "tipo": "Exercicio",
         "editar": "<i class='fa fa-pencil' aria-hidden='true'></i>",
         "excluir": "<i class='fa fa-trash' aria-hidden='true'></i>",
         "imprimir": "<i class='fa fa-print' aria-hidden='true'></i>"
@@ -82,7 +82,7 @@
     {
         "nome": "Prova_7.txt",
         "materia": "Engenharia de Software",
-        "tema": "SCRUM",
+        "tipo": "Prova",
         "editar": "<i class='fa fa-pencil' aria-hidden='true'></i>",
         "excluir": "<i class='fa fa-trash' aria-hidden='true'></i>",
         "imprimir": "<i class='fa fa-print' aria-hidden='true'></i>"
@@ -90,7 +90,7 @@
     {
         "nome": "Prova_8.txt",
         "materia": "Engenharia de Software",
-        "tema": "RUP",
+        "tipo": "Prova",
         "editar": "<i class='fa fa-pencil' aria-hidden='true'></i>",
         "excluir": "<i class='fa fa-trash' aria-hidden='true'></i>",
         "imprimir": "<i class='fa fa-print' aria-hidden='true'></i>"
@@ -98,7 +98,7 @@
     {
         "nome": "Exercicio_5.txt",
         "materia": "Engenharia de Software",
-        "tema": "Cascata",
+        "tipo": "Exercicio",
         "editar": "<i class='fa fa-pencil' aria-hidden='true'></i>",
         "excluir": "<i class='fa fa-trash' aria-hidden='true'></i>",
         "imprimir": "<i class='fa fa-print' aria-hidden='true'></i>"
@@ -106,7 +106,7 @@
     {
         "nome": "Prova_9.txt",
         "materia": "Engenharia de Software",
-        "tema": "XP e RUP",
+        "tipo": "Prova",
         "editar": "<i class='fa fa-pencil' aria-hidden='true'></i>",
         "excluir": "<i class='fa fa-trash' aria-hidden='true'></i>",
         "imprimir": "<i class='fa fa-print' aria-hidden='true'></i>"
@@ -114,7 +114,7 @@
     {
         "nome": "Exercicio_6.txt",
         "materia": "Engenharia de Software",
-        "tema": "Espiral e RUP",
+        "tipo": "Exercicio",
         "editar": "<i class='fa fa-pencil' aria-hidden='true'></i>",
         "excluir": "<i class='fa fa-trash' aria-hidden='true'></i>",
         "imprimir": "<i class='fa fa-print' aria-hidden='true'></i>"

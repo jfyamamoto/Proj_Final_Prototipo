@@ -9,8 +9,14 @@
         <div class="form-group">
             <div class="col-md-6 col-sm-12">
                 <label for="materia">Disciplina</label>
-                <input type="text" class="form-control" id="materia" aria-describedby="materiaHelp" placeholder="Insira o nome da disciplina">
-                <small id="materiaHelp" class="form-text text-muted">O nome da disciplina é obrigatório.</small>
+                <!-- <input type="text" class="form-control" id="materia" aria-describedby="materiaHelp" placeholder="Insira o nome da disciplina">
+                <small id="materiaHelp" class="form-text text-muted">O nome da disciplina é obrigatório.</small> -->
+                <select class="form-control">
+                        <option selected="selected">Selecione</option>
+                        <option value="1">Engenharia de Software</option>
+                        <option value="2">Análise de requisitos</option>
+                        <option value="2">Lógica de Programação</option>
+                    </select>
             </div>
             <div class="col-md-6 col-sm-12">
                 <label for="nome">Nome</label>
@@ -60,6 +66,6 @@
 <div>
     <div class="row botao-form-prova" style="margin-left:20px;">
         <a class="btn btn-primary" onclick="voltar();">Voltar</a>
-        <button class="btn btn-primary" onclick="gravarProva();">Gerar Documento</button>
+        <button class="btn btn-primary" onclick="gerarProva()">Gerar Documento</button>
     </div>
 </div>

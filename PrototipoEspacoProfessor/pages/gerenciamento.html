@@ -1,26 +1,39 @@
 <div class="row">
-<form id="formulario-gerenciamento">
-    <div class="form-group">
-        <div class="col-md-3 col-sm-12">
-            <label for="materia">Classificação</label>
-            <br>
-            <select class="form-control">
-                <option selected="selected">Selecione</option>
-                <option value="1">Disciplina</option>
-                <option value="2">Tema</option>
-                <option value="2">Subtema</option>
-            </select>
+    <form id="formulario-gerenciamento">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-3 col-sm-12" style="margin-left:15px;">
+                    <label for="materia">Classificação</label>
+                    <br>
+                    <select class="form-control">
+                        <option value="2" selected="selected">Tema</option>
+                        <option value="2">Subtema</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <label style="margin-top:5px;">Nome</label>
+                <input placeholder="Nome" class="form-control">
+            </div>
+            <div class="col-md-4">
+                <label style="margin-top:5px;">Disciplina</label>
+                <select class="form-control">
+                    <option>Engenharia de Software</option>
+                    <option>Análise de Requisitos</option>
+                    <option>Lógica de Programação</option>
+                </select>
+            </div>
         </div>
-        <div class="col-md-4">
-            <label>Nome</label>
-            <input placeholder="Nome" class="form-control">
+        <div class="row botao-form-prova" style="margin-left:20px;">
+            <a class="btn btn-primary" onclick="voltar();">Voltar</a>
+            <button class="btn btn-primary" onclick=" gerarMensagemTema(); return false;">Salvar</button>
+
         </div>
-    </div>
-    <div class="row botao-form-prova" style="margin-left:20px;">
-            <a class="btn btn-primary" onclick="voltar();" style="margin-top:25px;">Voltar</a>
-            <button class="btn btn-primary" onclick="{ alert('Salvo com sucesso!'); window.location.href='index.html';}" style="margin-top:25px;">Salvar</button>
+        <div id="tema-salvo">
+            <p style="padding: 10px; text-align: center; margin: 15px;"></p>
         </div>
-</form>
+    </form>
 </div>
 
 <div>
@@ -29,27 +42,35 @@
 
     <div class="row">
         <div class="col-md-10">
-            <h2>Disciplinas</h2>
+            <h2>Temas</h2>
             <table class="table table-bordered table-condensed table-striped">
                 <thead>
                     <tr>
                         <td style="font-weight:900">Nome</td>
-                        <td><i class='fa fa-trash' aria-hidden='true'></i></td>
-                        <td><i class='fa fa-pencil' aria-hidden='true'></i></td>
+                        <td style="font-weight:900">Disciplina</td>
+                        <td>
+                            <i class='fa fa-trash' aria-hidden='true'></i>
+                        </td>
+                        <td>
+                            <i class='fa fa-pencil' aria-hidden='true'></i>
+                        </td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Engenharia de software</td>
+                        <td>Metodologias Ágeis</td>
+                        <td>Engenharia de Software</td>
                         <td>Editar</td>
                         <td>Excluir</td>
                     </tr>
                     <tr>
+                        <td>Elicitação de dados</td>
                         <td>Análise de requisitos</td>
                         <td>Editar</td>
                         <td>Excluir</td>
                     </tr>
                     <tr>
+                        <td>Estruturas de repetição</td>
                         <td>Lógica de Programação</td>
                         <td>Editar</td>
                         <td>Excluir</td>

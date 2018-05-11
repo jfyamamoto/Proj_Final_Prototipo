@@ -1,1 +1,39 @@
-<div id="grafico-questoes-erradas" style="width:100%; height:400px;"></div>
+<div id="analise-tab-content" style="border: 1px solid #d3d3d3; padding:20px;min-height:550px;">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="desempenho-tab" data-toggle="tab" href="#desempenho" role="tab" aria-controls="desempenho"
+                aria-selected="true" style="color:red;">Desempenho das Turmas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="gerenciamento-tab" data-toggle="tab" href="#gerenciamento" role="tab" aria-controls="gerenciamento"
+                aria-selected="false" style="color:red;">Gerenciamento das Turmas</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myAnaliseContent">
+        <div class="tab-pane fade show active in" id="desempenho" role="tabpanel" aria-labelledby="home-tab">
+
+            <form id="formulario-analise-provas">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-3 col-sm-12">
+                            <label for="materia">Prova</label>
+                            <br>
+                            <select id="erros-prova" class="form-control">
+                                <option selected="selected">Selecione</option>
+                                <option value="1">Prova 1 ES - 1º Semestre</option>
+                                <option value="2">Prova 2 ES - 1º Semestre</option>
+                                <option value="2">Prova 1 ES - 2º Semestre</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div id="grafico-questoes-erradas" style="width:100%; height:400px;"></div>
+
+        </div>
+        <div class="tab-pane fade" id="gerenciamento" role="tabpanel" aria-labelledby="gerenciamento-tab">
+
+        </div>
+    </div>
+</div>

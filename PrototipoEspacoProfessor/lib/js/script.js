@@ -70,7 +70,6 @@ function obterQuestoes(){
     $.ajax({url: "pages/questoes.html", dataType:"html", success: function(result){
         $("#main-tab-content").html(result);
     }});
-    formulario-adicionar-questoes
 }
 
 function obterDadosProvas(){
@@ -86,7 +85,7 @@ function montarTabela(dados){
         columns: [
             { data: 'nome',  title: 'Nome'},
             { data: 'materia',  title: 'Matéria' },
-            { data: 'tema',  title: 'Tema' },
+            { data: 'tipo',  title: 'Tipo' },
             { data: 'excluir', title: 'Excluir'},
             { data: 'editar', title: 'Editar'},
             { data: 'imprimir',  title: 'Imprimir' }
@@ -123,11 +122,6 @@ function adicionarProvas(){
     }});
 }
 
-function gravarProva(){
-    alert("Documento salvo com sucesso!");
-    window.location.href="index.html";
-}
-
 function voltar(){
     window.location.href="index.html";
 }
@@ -147,11 +141,11 @@ function adicionarQuestao(){
     </td>
     <td>
         <select id="select-temas">
-            <option value="">Tema</option>
-            <option value="XP">XP</<option>
-            <option value="RUP">RUP</<option>
-            <option value="Elicitacao de Requisitos">Elicitação de requisitos</<option>
-            <option value="Cascata">Cascata</<option>
+            <option value="Projeto">Projeto</<option>
+            <option value="Metodologias Ágeis">Metodologias Ágeis</<option>
+            <option value="Elicitação de requisitos">Elicitação de requisitos</<option>
+            <option value="Tipos de projetos">Tipos de projetos</<option>
+            <option value="Densenvolvimento de software">Densenvolvimento de software</<option>
         </select>
         <a href="javascript:void" data-temas-added="` + numero + `" onclick="adicionarTemaCategoria(this)">Add</a>
     </td>
@@ -214,12 +208,20 @@ function limparTemas(conteudo){
 function obterDivAnalise(){
     $.ajax({url: "pages/Analise.html", dataType:"html", success: function(result){
         $("#main-tab-content").html(result);
-        gerarGraficoQuestoesErradas();
+        //gerarGraficoQuestoesErradas();
     }});
 }
 
 $("#analise-link").click(function(){
     obterDivAnalise();
+});
+
+//  $('#erros-prova').change( function(){
+//     alert('teste');
+//  });
+
+$(document).on('change','#erros-prova',function(){
+    gerarGraficoQuestoesErradas();
 });
 
 function gerarGraficoQuestoesErradas(){
@@ -229,10 +231,10 @@ function gerarGraficoQuestoesErradas(){
             type: 'column'
         },
         title: {
-            text: 'Desempenho dos alunos'
+            text: 'Desempenho por questão - 1º Prova / 1º Semestre}'
         },
         xAxis: {
-            categories: ['Questão [1]', 'Questão [2]', 'Questão [3]']
+            categories: ['Questão [1]', 'Questão [2]', 'Questão [3]', 'Questão [4]']
         },
         yAxis: {
             title: {
@@ -241,11 +243,50 @@ function gerarGraficoQuestoesErradas(){
         },
         series: [{
             name: 'Certas',
-            data: [1, 0, 4]
+            data: [1, 0, 4, 5]
         }, {
             name: 'Erradas',
-            data: [5, 7, 3]
+            data: [5, 7, 3, 2]
         }]
     });
 });
+}
+
+function obterDivProva(){
+    $.ajax({url: "pages/prova.html", dataType:"html", success: function(result){
+        $("#main-tab-content").append(result);
+    }});
+}
+
+function gerarProva(){
+    obterDivProva();
+}
+
+function gerarMensagemEnunciado(){
+    $('#mensagem-salva-enunciado p').html('Enunciado salvo com sucesso!<a href="javascript:void(0)" onclick="apagarMensagemQuestoes()"><i class="fa fa-times pull-right" aria-hidden="true"></i></a>');
+    $('#mensagem-salva-enunciado p').addClass('alert-success');
+    $('#descricao-enunciado').val('');
+}
+
+function gerarMensagemAfirmativa(){
+    $('#mensagem-salva-afirmativa p').html('Afirmativa salva com sucesso!<a href="javascript:void(0)" onclick="apagarMensagemQuestoes()"><i class="fa fa-times pull-right" aria-hidden="true"></i></a>');
+    $('#mensagem-salva-afirmativa p').addClass('alert-success');
+    $('#descricao-afirmativa').val('');
+}
+
+function apagarMensagemQuestoes(){
+    $('#mensagem-salva-enunciado p').html('');
+    $('#mensagem-salva-afirmativa p').html('');
+    $('#mensagem-salva-afirmativa p').removeClass('alert-success');
+    $('#mensagem-salva-enunciado p').removeClass('alert-success');
+}
+
+function apagarMensagemTema(){
+    $('#tema-salvo p').html('');
+    $('#tema-salvo p').removeClass('alert-success');
+}
+
+function gerarMensagemTema(){
+    $('#tema-salvo p').html('Tema salvo com sucesso!<a href="javascript:void(0)" onclick="apagarMensagemTema()"><i class="fa fa-times pull-right" aria-hidden="true"></i></a>');
+    $('#tema-salvo p').addClass('alert-success');
 }
